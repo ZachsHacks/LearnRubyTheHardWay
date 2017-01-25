@@ -1,6 +1,7 @@
 class Mirror < Room
 
 	def prompt
+		system "clear"
 		pretty_lines
 		puts "You look through the shack to only find a mirror"
 		puts "After staring at your reflection, you notice something odd."
@@ -41,7 +42,7 @@ class Mirror < Room
 				end
 			else
 				pretty_lines
-				puts "Your recover also raised evil #{@player.name}'s health!"
+				puts "Your recover also raised evil #{@player.name}'s health!" if m.health < 100
 				m.health += 10
 				if m.health > 100
 					m.health = 100

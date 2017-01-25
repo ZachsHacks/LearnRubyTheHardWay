@@ -1,6 +1,7 @@
 class Zombie < Room
 
 	def prompt
+		system "clear"
 		pretty_lines
 		puts "You walk passed the graveyard to find an abandoned road."
 		puts "You try to find food, because you are getting hungry."
@@ -27,6 +28,10 @@ class Zombie < Room
 			puts "Luckily, the Zombie was slow (Like the walking dead and not like left4dead)"
 			puts "You ran away safely into an abadoned shack.\n\n"
 		end
+
+		puts "Hit any key to continue..."
+		print ">"
+		gets
 
 	end
 

@@ -1,6 +1,7 @@
 class Vampire < Room
 
 	def prompt
+		system "clear"
 		pretty_lines
 		puts "You wake up in a graveyard."
 		puts "You see a figure in the distance."
@@ -61,6 +62,9 @@ class Vampire < Room
 		end
 
 		puts "You defeated the vampire! Onto the next room...\n\n"
+		puts "Hit any key to continue..."
+		print ">"
+		gets
 
 	end
 
